@@ -5,7 +5,7 @@ import "truffle/DeployedAddresses.sol";
 import "../contracts/MyContract.sol";
 
 contract TestMyContract {
-  function testInitialBalanceUsingDeployedContract() {
+  function testInitialBalanceUsingDeployedContract() public {
     MyContract meta = MyContract(DeployedAddresses.MyContract());
 
     uint expected = 100 ether;
@@ -23,7 +23,7 @@ contract TestMyContract {
 
   }
 
-   function testTransfer() {
+   function testTransfer() public {
     uint expected = 100 ether;
 
     address transfer_from = address(0xC5fdf4076b8F3A5357c5E395ab970B5B54098Fef);
